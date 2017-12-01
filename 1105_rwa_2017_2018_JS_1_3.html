@@ -1,0 +1,26 @@
+<html>
+<body>
+<form id="mojaForma" action="/action_page.php">
+    Unesi broj: <input type="text" name="broj"><br>
+    <input type="button" onclick="mojaFunkcija()" value="Unesi">
+</form>
+
+<script>
+    function mojaFunkcija() {
+        var broj = document.forms["mojaForma"]["broj"].value;
+        for(i = 1; i <= broj; i++)
+            faktorijel(i);
+    }
+    
+    function faktorijel(i)
+    {
+        var fakt = 1;
+        var j;
+        for(j = 1; j <= i; j++)
+            fakt = fakt * j;
+        document.write(i.toString() + "! = " + fakt.toString() + "<br>");
+    }
+</script>
+
+</body>
+</html> 

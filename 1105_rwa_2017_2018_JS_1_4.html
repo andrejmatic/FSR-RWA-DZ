@@ -1,0 +1,26 @@
+<html>
+<body>
+<form id="mojaForma" action="/action_page.php">
+    Unesi prvi broj: <input type="text" name="broj1"><br>
+    Unesi drugi broj: <input type="text" name="broj2"><br>
+    <input type="button" onclick="mojaFunkcija()" value="Unesi">
+</form>
+
+<script>
+
+    function mojaFunkcija() {
+        var broj1 = document.forms["mojaForma"]["broj1"].value;
+        var broj2 = document.forms["mojaForma"]["broj2"].value;
+        aritmetickaSredina(broj1, broj2);
+    }
+    
+    function aritmetickaSredina(broj1, broj2)
+    {
+        var as
+        as = (Number(broj1) + Number(broj2)) / 2
+        document.write("Aritmeticka sredina je " + as + "<br>")
+    }
+</script>
+
+</body>
+</html>
