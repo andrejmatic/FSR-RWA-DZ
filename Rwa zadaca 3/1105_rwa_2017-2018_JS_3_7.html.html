@@ -1,0 +1,96 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+
+function racunaj (callback){
+    var a=operand1.value;
+	var b=operand2.value;
+	var rez=window[callback];
+	alert(rez(a,b));
+
+	}
+
+function zbroji (a, b) {
+    return (a + " + " + b + " = " + (parseInt(a)+parseInt(b)));
+	}
+	
+function oduzmi (a, b){
+	return (a + " - " + b + " = " + (parseInt(a)-parseInt(b)));
+}
+
+function puta (a, b){
+	return (a + " * " + b + " = " + (parseInt(a)*parseInt(b)));
+}
+
+function podijeli (a, b){
+	return (a + " / " + b + " = " + (parseInt(a)/parseInt(b)));
+}
+
+function sinus (a, b){
+	return  "sinus od " + a +  " = " + Math.sin(a);
+}
+
+function cosinus (a, b){
+	return  "kosinus od " + a + " = " + Math.cos(a);
+}
+
+function tangens (a, b){
+	return  "tangens od " + a +" = " + Math.tan(a);
+}
+
+function ln (a, b){
+	return  "ln "+ a + " = " + Math.log(a);
+}
+
+function log (a, b){
+	return  "logaritam od " + a + " po bazi 10 = " + Math.log(a)/Math.log(10);
+}
+
+function kvadriraj (a, b){
+	return  "kvadrat od " + a + " = " + Math.pow(a,2);
+}
+
+   function kubiraj (a, b){
+	return  "kub od " + a + " = " + Math.pow(a,3);
+}
+
+function potenciraj (a, b){
+	return  a + " na " + b + " = " + Math.pow(a,b);
+}
+
+</script>
+
+<form>
+<input type ="text " id="operand1" /> operand1 <br><br>
+
+<input type ="text " id="operand2" /> operand2 <br><br>
+
+<input type ="button" id="zbroji" value="+" onclick="racunaj('zbroji')"/>
+
+<input type ="button" id="oduzmi" value="-" onclick="racunaj('oduzmi')"/>
+
+<input type ="button" id="pomnozi" value="*" onclick="racunaj('puta')"/>
+
+<input type ="button" id="podijeli" value="/" onclick="racunaj('podijeli')"/><br><br>
+
+<input type ="button" id="sin" value="sin" onclick="racunaj('sinus')"/>
+
+<input type ="button" id="cos" value="cos" onclick="racunaj('cosinus')"/>
+
+<input type ="button" id="tan" value="tan" onclick="racunaj('tangens')"/><br><br>
+
+<input type ="button" id="ln" value="ln" onclick="racunaj('ln')"/>
+
+<input type ="button" id="log" value="log" onclick="racunaj('log')"/><br><br>
+
+<input type ="button" id="kvadr" value="^2" onclick="racunaj('kvadriraj')"/>
+
+<input type ="button" id="kub" value="^3" onclick="racunaj('kubiraj')"/>
+
+<input type ="button" id="pot" value="a^b" onclick="racunaj('potenciraj')"/>
+
+
+</body>
+
+</html>

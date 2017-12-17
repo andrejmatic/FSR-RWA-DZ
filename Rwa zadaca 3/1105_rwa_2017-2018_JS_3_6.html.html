@@ -1,0 +1,51 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+
+function preracunaj(callback) {
+var dan = dani.value;
+var mjesec = mjeseci.value;
+var godina = godine.value;
+var rez=window[callback];
+	alert(rez(dan,mjesec,godina));
+
+var datum= new Date();
+var day = datum.getDate();  
+var month = datum.getMonth() +1; 
+var year = datum.getFullYear();   
+ *if( godina > year ) { alert("godina mora biti manja od " + year + " pokusajte ponovno " );return;
+ }
+var brojGodina;
+var kontrola=0;
+if (mjesec < month) kontrola=0;
+else if (mjesec==month) {
+	if(dan<=day) kontrola =0;
+	else kontrola=1;
+	}
+else kontrola=1;
+
+brojGodina = year - godina - kontrola;
+alert(rez("vi imate " + brojGodina + " godina"));
+}
+*/
+
+var rez = (parseInt(year)*365+parseInt(month)*30+parseInt(day))-(parseInt(godina)*365+parseInt(mjesec)*30+parseInt(dan));
+console.log(rez);
+console.log("vi imate "  + Math.floor(rez/365) + " godina " + Math.floor((rez%365)/30) + " mjeseci " + Math.floor((rez%365)%30) + " dana");
+
+}
+</script>
+
+<form>
+Unesite dan(01-31)<input type="text" id="dani" /> <br><br>
+Unesite mjesec (01-12) <input type="text" id="mjeseci" /> <br><br>
+Unesite godinu (npr 1970) <input type="text" id="godine" /> <br> <br>
+
+<input type= "button" value="izracunaj" onclick="preracunaj()"/>
+
+</form>
+
+</body>
+
+</html>

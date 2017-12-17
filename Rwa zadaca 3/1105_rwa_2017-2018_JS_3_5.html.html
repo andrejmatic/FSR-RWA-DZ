@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+
+function Zbroji(){
+var x = operand1.value;
+var y = operand2.value;
+        
+		if(isNaN(x)||isNaN(y) || x==""  || y==""){
+         alert("niste unijeli broj ");
+         operand1.value="";
+         operand2.value="";
+         rezultat.value="";
+}
+         else rezultat.value=parseInt(x) + parseInt(y);
+}
+
+</script>
+
+<form>
+
+X = <input type="text" id="operand1"/> <br><br>
+
+Y = <input type="text" id="operand2"/> <br><br>
+
+<input type ="button" value="Zbroji" onclick="Zbroji()"/>
+
+<hr width="40%" align="left">
+
+Rezultat = <input type="text" id="rezultat"/>
+</form>
+
+</body>
+
+</html>

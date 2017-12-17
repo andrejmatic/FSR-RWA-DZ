@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+</head>
+<body>
+<form>
+<input type="text" name="red" id="mbr"/>
+<button>PROVJERI</button>
+<p id="ispis"></p>
+<p></p>
+</form>
+<script>
+//ovdje unesite jQuery kod
+$(document).ready(function(){
+	$("form").submit(function(){
+	 var mb=parseInt($("#mbr").val());
+	 if(mb%2==0)alert("paran");
+	 else alert("neparan");
+	 });
+
+
+</script>
+</body>
+</html>

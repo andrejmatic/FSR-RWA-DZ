@@ -1,0 +1,46 @@
+<html>
+<head></head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+<script>
+$(document).ready(function(){
+ $("#tekst").click(function(){
+ var table=document.createElement('table');
+ table.id="tabi";
+ table.border="5px";
+
+var i=0,j;
+	var brojRedaka= parseInt($("#1").val());
+	var brojStupaca= parseInt($("#2").val());
+	
+     for ( i=0;i<brojRedaka;i++){
+	
+	table.insertRow(i);
+	 for(j=0;j<brojStupaca-1;j++){
+	 
+	 table.rows[i].insertCell(j).innerHTML=0;
+	 }
+	
+	
+	}
+	
+	document.body.appendChild(table);		
+});
+
+});
+
+</script>
+<form>
+Broj redaka : <input type="text" id = "1" ></input><br /> <br />
+Broj stupaca : <input type="text" id = "2" ></input><br /> <br />
+<!-- <button type="button" id="dugme" >Potvrdi</button><br /> <br />	-->
+<p id="tekst">Klikni !!</p>
+</form>
+<!--	<div id="tabi" align="center" width="400px" height="400px"></div>	-->
+
+
+
+</div>
+</body>
+
+</html>
